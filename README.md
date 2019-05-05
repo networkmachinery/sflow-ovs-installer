@@ -15,4 +15,4 @@ $ ./bin/networkmachinery-sflow
 
 ### Testing
 
-``make test``
+``make test``# sflow-ovs-installer

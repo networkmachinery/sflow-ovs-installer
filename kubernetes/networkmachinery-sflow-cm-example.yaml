@@ -1,0 +1,13 @@
+# config map for configuring the networkmachinery-sflow init container
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: sflow-cm
+  namespace: default
+data:
+  collector_ip: 10.0.0.10
+  collector_port: 6343
+  agent_ip: br0
+  header_bytes: 128
+  sampling_n: 64
+  polling_secs: 5
