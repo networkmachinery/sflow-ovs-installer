@@ -1,10 +1,7 @@
 package log
 
 import (
-	"os"
-
 	"github.com/sirupsen/logrus"
-	
 )
 
 // Logger defines a set of methods for writing application logs. Derived from and
@@ -39,20 +36,17 @@ type Logger interface {
 var defaultLogger *logrus.Logger
 
 func init() {
-	defaultLogger = newLogrusLogger(config.Config())
+	defaultLogger = newLogrusLogger()
 }
-
 
 func NewLogger() *logrus.Logger {
 	return newLogrusLogger()
 }
 
-
-
 func newLogrusLogger() *logrus.Logger {
 
 	l := logrus.New()
-	
+
 	return l
 }
 

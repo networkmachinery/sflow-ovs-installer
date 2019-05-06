@@ -1,6 +1,7 @@
-package flags
+package environment
 
 import (
+	"fmt"
 	"os"
 
 	"github.com/spf13/pflag"
@@ -8,12 +9,13 @@ import (
 
 // flagToEnv maps flag names to environment variables
 var flatToEnv = map[string]string{
-	"collector_ip":   "COLLECTOR_IP",
-	"collector_port": "COLLECTOR_PORT",
-	"agent_ip":       "AGENT_IP",
-	"header_bytes":   "HEADER_BYTES",
-	"sampling_n":     "SAMPLING_N",
-	"polling_secs":   "POLLING_SECS",
+	"bridge-name":    "BRIDGE_NAME",
+	"collector-ip":   "COLLECTOR_IP",
+	"collector-port": "COLLECTOR_PORT",
+	"agent-ip":       "AGENT_IP",
+	"header-bytes":   "HEADER_BYTES",
+	"sampling-n":     "SAMPLING_N",
+	"polling-secs":   "POLLING_SECS",
 }
 
 func FlagToEnv(fs *pflag.FlagSet) {
@@ -28,6 +30,7 @@ func setFlagFromEnv(name, environmentVariable string, fs *pflag.FlagSet) {
 		return
 	}
 	if v, ok := os.LookupEnv(environmentVariable); ok {
+		fmt.Println(name, environmentVariable, v)
 		fs.Set(name, v)
 	}
 }

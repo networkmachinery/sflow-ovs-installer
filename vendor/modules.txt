@@ -1,0 +1,14 @@
+# github.com/digitalocean/go-openvswitch v0.0.0-20190501201037-c06b9271f571
+github.com/digitalocean/go-openvswitch/ovs
+# github.com/inconshreveable/mousetrap v1.0.0
+github.com/inconshreveable/mousetrap
+# github.com/konsorten/go-windows-terminal-sequences v1.0.1
+github.com/konsorten/go-windows-terminal-sequences
+# github.com/sirupsen/logrus v1.4.1
+github.com/sirupsen/logrus
+# github.com/spf13/cobra v0.0.3
+github.com/spf13/cobra
+# github.com/spf13/pflag v1.0.3
+github.com/spf13/pflag
+# golang.org/x/sys v0.0.0-20190312061237-fead79001313
+golang.org/x/sys/unix
