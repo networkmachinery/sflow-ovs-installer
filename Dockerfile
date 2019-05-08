@@ -15,7 +15,7 @@ WORKDIR /go/src/github.com/networkmachinery/sflow-ovs-installer
 RUN make build-alpine
 
 # Final Stage
-FROM ubuntu:16.04
+FROM debian:stretch-slim
 
 RUN apt update && apt install -y openvswitch-switch iptables wget
 # Adding dump-init to handle

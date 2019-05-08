@@ -44,7 +44,6 @@ func NewLogger() *logrus.Logger {
 }
 
 func newLogrusLogger() *logrus.Logger {
-
 	l := logrus.New()
 
 	return l
